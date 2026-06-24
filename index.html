@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graduación 2025 – Colegio Real de Santiago | Plantel San Juan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Lato:wght@300;400;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- CANVAS PARTÍCULAS -->
+  <canvas id="particles"></canvas>
+
+  <!-- CURSOR PERSONALIZADO -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <img src="assets/logo.png" alt="Colegio Real de Santiago" class="nav-logo-img" onerror="this.style.display='none'" />
+      <span class="nav-name">Colegio Real de Santiago</span>
+    </div>
+    <div class="nav-links">
+      <a href="#seccion-1" class="nav-link" data-section="1">1° Sección</a>
+      <a href="#seccion-2" class="nav-link" data-section="2">2° Sección</a>
+      <a href="#seccion-3" class="nav-link" data-section="3">3° Sección</a>
+    </div>
+    <div class="nav-burger" id="navBurger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-gradient"></div>
+    <div class="hero-arch-left"></div>
+    <div class="hero-arch-right"></div>
+
+    <div class="hero-content">
+      <div class="hero-emblem">
+        <div class="emblem-ring">
+          <div class="emblem-inner">
+            <div class="logo-placeholder">
+              <img src="assets/logo.png" alt="Colegio Real" class="logo-hero" onerror="this.parentElement.innerHTML=logoFallback()" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-text">
+        <p class="hero-eyebrow">Plantel San Juan · 2025</p>
+        <h1 class="hero-title">
+          <span class="hero-title-line">Ceremonia de</span>
+          <span class="hero-title-gold">Graduación</span>
+        </h1>
+        <p class="hero-subtitle">Colegio Real de Santiago</p>
+        <p class="hero-desc">Un honor celebrar el logro más importante de nuestros alumnos.<br>Tres noches, tres historias, una sola excelencia.</p>
+
+        <div class="hero-dates">
+          <a href="#seccion-1" class="date-pill date-pill-1">
+            <span class="date-pill-day">1</span>
+            <span class="date-pill-info"><strong>Julio</strong><br>1° Sección</span>
+          </a>
+          <a href="#seccion-2" class="date-pill date-pill-2">
+            <span class="date-pill-day">2</span>
+            <span class="date-pill-info"><strong>Julio</strong><br>2° Sección</span>
+          </a>
+          <a href="#seccion-3" class="date-pill date-pill-3">
+            <span class="date-pill-day">3</span>
+            <span class="date-pill-info"><strong>Julio</strong><br>3° Sección</span>
+          </a>
+        </div>
+
+        <!-- COUNTDOWN -->
+        <div class="countdown-wrap" id="countdown-wrap">
+          <p class="countdown-label">Cuenta regresiva · Primera ceremonia</p>
+          <div class="countdown" id="countdown">
+            <span>--<small>días</small></span>
+            <span>--<small>hrs</small></span>
+            <span>--<small>min</small></span>
+            <span>--<small>seg</small></span>
+          </div>
+        </div>
+
+        <div class="hero-scroll-hint">
+          <div class="scroll-line"></div>
+          <span>Explorar</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Birretes animados -->
+    <div class="caps-container" id="caps"></div>
+  </section>
+
+  <!-- DIVISOR ONDULADO -->
+  <div class="wave-divider wave-divider-top">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#0a0e2e"/>
+    </svg>
+  </div>
+
+  <!-- SECCIÓN 1 -->
+  <section class="grad-section" id="seccion-1">
+    <div class="section-bg-number">01</div>
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <div class="section-badge">Primera Sección</div>
+        <h2 class="section-title">Noche de <span class="gold-text">Gala</span></h2>
+        <div class="section-date-display">
+          <div class="big-date">
+            <span class="day-num">01</span>
+            <div class="month-year">
+              <span class="month-name">Julio</span>
+              <span class="year-num">2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="details-grid reveal">
+        <div class="detail-card">
+          <div class="detail-icon">🕖</div>
+          <h3>Horario</h3>
+          <p>Recepción: <strong>6:00 PM</strong></p>
+          <p>Ceremonia: <strong>7:00 PM</strong></p>
+        </div>
+        <div class="detail-card detail-card-featured">
+          <div class="detail-icon">📍</div>
+          <h3>Lugar</h3>
+          <p>Auditorio Principal</p>
+          <p><strong>Colegio Real de Santiago</strong></p>
+          <p>Plantel San Juan</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-icon">👗</div>
+          <h3>Etiqueta</h3>
+          <p>Formal / Gala</p>
+          <p><strong>Semiformal aceptado</strong></p>
+        </div>
+      </div>
+
+      <div class="invite-card reveal">
+        <div class="invite-card-inner">
+          <div class="invite-ornament">✦</div>
+          <p class="invite-text">Es un honor invitarle a ser parte de este momento irrepetible en la vida de nuestros graduados de <strong>Primera Sección</strong>. Su presencia honra este logro.</p>
+          <div class="invite-ornament">✦</div>
+        </div>
+      </div>
+
+      <a href="#seccion-2" class="next-section-btn">Ver 2° Sección <span>↓</span></a>
+    </div>
+  </section>
+
+  <!-- DIVISOR ESTRELLAS -->
+  <div class="stars-divider">
+    <div class="stars-line"><span class="star-dot"></span><span class="star-line-hr"></span><span class="star-dot"></span><span class="star-line-hr"></span><span class="star-dot"></span></div>
+  </div>
+
+  <!-- SECCIÓN 2 -->
+  <section class="grad-section grad-section-alt" id="seccion-2">
+    <div class="section-bg-number">02</div>
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <div class="section-badge section-badge-gold">Segunda Sección</div>
+        <h2 class="section-title">Noche de <span class="gold-text">Honor</span></h2>
+        <div class="section-date-display">
+          <div class="big-date">
+            <span class="day-num">02</span>
+            <div class="month-year">
+              <span class="month-name">Julio</span>
+              <span class="year-num">2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="details-grid reveal">
+        <div class="detail-card">
+          <div class="detail-icon">🕖</div>
+          <h3>Horario</h3>
+          <p>Recepción: <strong>6:00 PM</strong></p>
+          <p>Ceremonia: <strong>7:00 PM</strong></p>
+        </div>
+        <div class="detail-card detail-card-featured">
+          <div class="detail-icon">📍</div>
+          <h3>Lugar</h3>
+          <p>Auditorio Principal</p>
+          <p><strong>Colegio Real de Santiago</strong></p>
+          <p>Plantel San Juan</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-icon">👗</div>
+          <h3>Etiqueta</h3>
+          <p>Formal / Gala</p>
+          <p><strong>Semiformal aceptado</strong></p>
+        </div>
+      </div>
+
+      <div class="invite-card reveal">
+        <div class="invite-card-inner">
+          <div class="invite-ornament">✦</div>
+          <p class="invite-text">Con gran orgullo, extendemos esta invitación a la ceremonia de <strong>Segunda Sección</strong>. Un momento de emoción, logro y gratitud que atesoraremos para siempre.</p>
+          <div class="invite-ornament">✦</div>
+        </div>
+      </div>
+
+      <a href="#seccion-3" class="next-section-btn">Ver 3° Sección <span>↓</span></a>
+    </div>
+  </section>
+
+  <!-- DIVISOR ESTRELLAS -->
+  <div class="stars-divider">
+    <div class="stars-line"><span class="star-dot"></span><span class="star-line-hr"></span><span class="star-dot"></span><span class="star-line-hr"></span><span class="star-dot"></span></div>
+  </div>
+
+  <!-- SECCIÓN 3 -->
+  <section class="grad-section" id="seccion-3">
+    <div class="section-bg-number">03</div>
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <div class="section-badge">Tercera Sección</div>
+        <h2 class="section-title">Noche de <span class="gold-text">Gloria</span></h2>
+        <div class="section-date-display">
+          <div class="big-date">
+            <span class="day-num">03</span>
+            <div class="month-year">
+              <span class="month-name">Julio</span>
+              <span class="year-num">2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="details-grid reveal">
+        <div class="detail-card">
+          <div class="detail-icon">🕖</div>
+          <h3>Horario</h3>
+          <p>Recepción: <strong>6:00 PM</strong></p>
+          <p>Ceremonia: <strong>7:00 PM</strong></p>
+        </div>
+        <div class="detail-card detail-card-featured">
+          <div class="detail-icon">📍</div>
+          <h3>Lugar</h3>
+          <p>Auditorio Principal</p>
+          <p><strong>Colegio Real de Santiago</strong></p>
+          <p>Plantel San Juan</p>
+        </div>
+        <div class="detail-card">
+          <div class="detail-icon">👗</div>
+          <h3>Etiqueta</h3>
+          <p>Formal / Gala</p>
+          <p><strong>Semiformal aceptado</strong></p>
+        </div>
+      </div>
+
+      <div class="invite-card reveal">
+        <div class="invite-card-inner">
+          <div class="invite-ornament">✦</div>
+          <p class="invite-text">Cerramos con broche de oro nuestra semana de celebración con la <strong>Tercera Sección</strong>. Juntos festejamos cada paso, cada esfuerzo y cada sueño hecho realidad.</p>
+          <div class="invite-ornament">✦</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo-wrap">
+        <img src="assets/logo.png" alt="Colegio Real" class="footer-logo" onerror="this.style.display='none'" />
+      </div>
+      <div class="footer-sep"></div>
+      <p class="footer-name">Colegio Real de Santiago</p>
+      <p class="footer-sub">Plantel San Juan · Generación 2025</p>
+      <p class="footer-quote">"El saber es la corona más noble que un ser humano puede portar."</p>
+      <div class="footer-crowns">
+        <span>👑</span><span>👑</span><span>👑</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
