@@ -11,7 +11,7 @@
 </head>
 <body>
 
-  <!-- CANVAS PARTÍCULAS -->
+  <!-- CANVAS PARTÍCULAS (full page) -->
   <canvas id="particles"></canvas>
 
   <!-- CURSOR PERSONALIZADO -->
@@ -24,10 +24,11 @@
       <img src="assets/logo.png" alt="Colegio Real de Santiago" class="nav-logo-img" onerror="this.style.display='none'" />
       <span class="nav-name">Colegio Real de Santiago</span>
     </div>
-    <div class="nav-links">
-      <a href="#seccion-1" class="nav-link" data-section="1">1° Sección</a>
-      <a href="#seccion-2" class="nav-link" data-section="2">2° Sección</a>
-      <a href="#seccion-3" class="nav-link" data-section="3">3° Sección</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#seccion-1" class="nav-link">1° Sección</a>
+      <a href="#seccion-2" class="nav-link">2° Sección</a>
+      <a href="#seccion-3" class="nav-link">3° Sección</a>
+      <a href="#reservar" class="nav-link nav-link-cta">Reservar lugar</a>
     </div>
     <div class="nav-burger" id="navBurger">
       <span></span><span></span><span></span>
@@ -44,9 +45,7 @@
       <div class="hero-emblem">
         <div class="emblem-ring">
           <div class="emblem-inner">
-            <div class="logo-placeholder">
-              <img src="assets/logo.png" alt="Colegio Real" class="logo-hero" onerror="this.parentElement.innerHTML=logoFallback()" />
-            </div>
+            <img src="assets/logo.png" alt="Colegio Real" class="logo-hero" onerror="this.style.display='none'" />
           </div>
         </div>
       </div>
@@ -60,23 +59,24 @@
         <p class="hero-subtitle">Colegio Real de Santiago</p>
         <p class="hero-desc">Un honor celebrar el logro más importante de nuestros alumnos.<br>Tres noches, tres historias, una sola excelencia.</p>
 
+        <!-- DATE PILLS — todos iguales visualmente, sin dorado especial -->
         <div class="hero-dates">
-          <a href="#seccion-1" class="date-pill date-pill-1">
+          <a href="#seccion-1" class="date-pill">
             <span class="date-pill-day">1</span>
             <span class="date-pill-info"><strong>Julio</strong><br>1° Sección</span>
           </a>
-          <a href="#seccion-2" class="date-pill date-pill-2">
+          <a href="#seccion-2" class="date-pill">
             <span class="date-pill-day">2</span>
             <span class="date-pill-info"><strong>Julio</strong><br>2° Sección</span>
           </a>
-          <a href="#seccion-3" class="date-pill date-pill-3">
+          <a href="#seccion-3" class="date-pill">
             <span class="date-pill-day">3</span>
             <span class="date-pill-info"><strong>Julio</strong><br>3° Sección</span>
           </a>
         </div>
 
         <!-- COUNTDOWN -->
-        <div class="countdown-wrap" id="countdown-wrap">
+        <div class="countdown-wrap">
           <p class="countdown-label">Cuenta regresiva · Primera ceremonia</p>
           <div class="countdown" id="countdown">
             <span>--<small>días</small></span>
@@ -92,52 +92,64 @@
         </div>
       </div>
     </div>
-
-    <!-- Birretes animados -->
-    <div class="caps-container" id="caps"></div>
   </section>
 
   <!-- DIVISOR ONDULADO -->
-  <div class="wave-divider wave-divider-top">
+  <div class="wave-divider">
     <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
       <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#0a0e2e"/>
     </svg>
   </div>
 
-  <!-- SECCIÓN 1 -->
+  <!-- ══════════ SECCIÓN 1 ══════════ -->
   <section class="grad-section" id="seccion-1">
     <div class="section-bg-number">01</div>
     <div class="section-inner">
+
       <div class="section-header reveal">
         <div class="section-badge">Primera Sección</div>
         <h2 class="section-title">Noche de <span class="gold-text">Gala</span></h2>
-        <div class="section-date-display">
-          <div class="big-date">
-            <span class="day-num">01</span>
-            <div class="month-year">
-              <span class="month-name">Julio</span>
-              <span class="year-num">2025</span>
-            </div>
+        <div class="big-date-box">
+          <span class="day-num">01</span>
+          <div class="month-year">
+            <span class="month-name">Julio</span>
+            <span class="year-num">2025</span>
           </div>
         </div>
       </div>
 
       <div class="details-grid reveal">
+        <!-- HORARIO -->
         <div class="detail-card">
-          <div class="detail-icon">🕖</div>
+          <div class="detail-icon-svg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
           <h3>Horario</h3>
           <p>Recepción: <strong>6:00 PM</strong></p>
           <p>Ceremonia: <strong>7:00 PM</strong></p>
         </div>
+        <!-- LUGAR -->
         <div class="detail-card detail-card-featured">
-          <div class="detail-icon">📍</div>
+          <div class="detail-icon-svg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+          </div>
           <h3>Lugar</h3>
           <p>Auditorio Principal</p>
           <p><strong>Colegio Real de Santiago</strong></p>
           <p>Plantel San Juan</p>
         </div>
+        <!-- ETIQUETA -->
         <div class="detail-card">
-          <div class="detail-icon">👗</div>
+          <div class="detail-icon-svg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2l2.5 5 5.5.8-4 3.9.9 5.5L12 14.8l-4.9 2.4.9-5.5L4 7.8l5.5-.8z"/>
+            </svg>
+          </div>
           <h3>Etiqueta</h3>
           <p>Formal / Gala</p>
           <p><strong>Semiformal aceptado</strong></p>
@@ -152,49 +164,66 @@
         </div>
       </div>
 
+      <!-- BOTÓN RESERVAR SECCIÓN 1 -->
+      <a href="#reservar" class="reserve-btn reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Reservar mi lugar · 1° Sección
+      </a>
+
       <a href="#seccion-2" class="next-section-btn">Ver 2° Sección <span>↓</span></a>
     </div>
   </section>
 
-  <!-- DIVISOR ESTRELLAS -->
   <div class="stars-divider">
     <div class="stars-line"><span class="star-dot"></span><span class="star-line-hr"></span><span class="star-dot"></span><span class="star-line-hr"></span><span class="star-dot"></span></div>
   </div>
 
-  <!-- SECCIÓN 2 -->
+  <!-- ══════════ SECCIÓN 2 ══════════ -->
   <section class="grad-section grad-section-alt" id="seccion-2">
     <div class="section-bg-number">02</div>
     <div class="section-inner">
+
       <div class="section-header reveal">
-        <div class="section-badge section-badge-gold">Segunda Sección</div>
+        <div class="section-badge">Segunda Sección</div>
         <h2 class="section-title">Noche de <span class="gold-text">Honor</span></h2>
-        <div class="section-date-display">
-          <div class="big-date">
-            <span class="day-num">02</span>
-            <div class="month-year">
-              <span class="month-name">Julio</span>
-              <span class="year-num">2025</span>
-            </div>
+        <div class="big-date-box">
+          <span class="day-num">02</span>
+          <div class="month-year">
+            <span class="month-name">Julio</span>
+            <span class="year-num">2025</span>
           </div>
         </div>
       </div>
 
       <div class="details-grid reveal">
         <div class="detail-card">
-          <div class="detail-icon">🕖</div>
+          <div class="detail-icon-svg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
           <h3>Horario</h3>
           <p>Recepción: <strong>6:00 PM</strong></p>
           <p>Ceremonia: <strong>7:00 PM</strong></p>
         </div>
         <div class="detail-card detail-card-featured">
-          <div class="detail-icon">📍</div>
+          <div class="detail-icon-svg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+          </div>
           <h3>Lugar</h3>
           <p>Auditorio Principal</p>
           <p><strong>Colegio Real de Santiago</strong></p>
           <p>Plantel San Juan</p>
         </div>
         <div class="detail-card">
-          <div class="detail-icon">👗</div>
+          <div class="detail-icon-svg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2l2.5 5 5.5.8-4 3.9.9 5.5L12 14.8l-4.9 2.4.9-5.5L4 7.8l5.5-.8z"/>
+            </svg>
+          </div>
           <h3>Etiqueta</h3>
           <p>Formal / Gala</p>
           <p><strong>Semiformal aceptado</strong></p>
@@ -209,49 +238,65 @@
         </div>
       </div>
 
+      <a href="#reservar" class="reserve-btn reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Reservar mi lugar · 2° Sección
+      </a>
+
       <a href="#seccion-3" class="next-section-btn">Ver 3° Sección <span>↓</span></a>
     </div>
   </section>
 
-  <!-- DIVISOR ESTRELLAS -->
   <div class="stars-divider">
     <div class="stars-line"><span class="star-dot"></span><span class="star-line-hr"></span><span class="star-dot"></span><span class="star-line-hr"></span><span class="star-dot"></span></div>
   </div>
 
-  <!-- SECCIÓN 3 -->
+  <!-- ══════════ SECCIÓN 3 ══════════ -->
   <section class="grad-section" id="seccion-3">
     <div class="section-bg-number">03</div>
     <div class="section-inner">
+
       <div class="section-header reveal">
         <div class="section-badge">Tercera Sección</div>
         <h2 class="section-title">Noche de <span class="gold-text">Gloria</span></h2>
-        <div class="section-date-display">
-          <div class="big-date">
-            <span class="day-num">03</span>
-            <div class="month-year">
-              <span class="month-name">Julio</span>
-              <span class="year-num">2025</span>
-            </div>
+        <div class="big-date-box">
+          <span class="day-num">03</span>
+          <div class="month-year">
+            <span class="month-name">Julio</span>
+            <span class="year-num">2025</span>
           </div>
         </div>
       </div>
 
       <div class="details-grid reveal">
         <div class="detail-card">
-          <div class="detail-icon">🕖</div>
+          <div class="detail-icon-svg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
           <h3>Horario</h3>
           <p>Recepción: <strong>6:00 PM</strong></p>
           <p>Ceremonia: <strong>7:00 PM</strong></p>
         </div>
         <div class="detail-card detail-card-featured">
-          <div class="detail-icon">📍</div>
+          <div class="detail-icon-svg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+          </div>
           <h3>Lugar</h3>
           <p>Auditorio Principal</p>
           <p><strong>Colegio Real de Santiago</strong></p>
           <p>Plantel San Juan</p>
         </div>
         <div class="detail-card">
-          <div class="detail-icon">👗</div>
+          <div class="detail-icon-svg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2l2.5 5 5.5.8-4 3.9.9 5.5L12 14.8l-4.9 2.4.9-5.5L4 7.8l5.5-.8z"/>
+            </svg>
+          </div>
           <h3>Etiqueta</h3>
           <p>Formal / Gala</p>
           <p><strong>Semiformal aceptado</strong></p>
@@ -265,22 +310,76 @@
           <div class="invite-ornament">✦</div>
         </div>
       </div>
+
+      <a href="#reservar" class="reserve-btn reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Reservar mi lugar · 3° Sección
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════ SECCIÓN RESERVAR ══════════ -->
+  <section class="rsvp-section" id="reservar">
+    <div class="rsvp-inner">
+      <div class="section-badge reveal" style="margin-bottom:16px">Confirmación de asistencia</div>
+      <h2 class="rsvp-title reveal">Reserva tu <span class="gold-text">Lugar</span></h2>
+      <p class="rsvp-desc reveal">Confirma tu asistencia a la ceremonia de graduación que corresponda. Los lugares son limitados — ¡no te quedes sin el tuyo!</p>
+
+      <div class="rsvp-cards reveal">
+        <!-- Card 1 -->
+        <div class="rsvp-card">
+          <div class="rsvp-card-date">01</div>
+          <div class="rsvp-card-info">
+            <span class="rsvp-card-label">1° Sección · Noche de Gala</span>
+            <span class="rsvp-card-sub">1 de Julio · 7:00 PM</span>
+          </div>
+          <a href="https://forms.google.com" target="_blank" class="rsvp-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Reservar
+          </a>
+        </div>
+        <!-- Card 2 -->
+        <div class="rsvp-card rsvp-card-highlight">
+          <div class="rsvp-card-date">02</div>
+          <div class="rsvp-card-info">
+            <span class="rsvp-card-label">2° Sección · Noche de Honor</span>
+            <span class="rsvp-card-sub">2 de Julio · 7:00 PM</span>
+          </div>
+          <a href="https://forms.google.com" target="_blank" class="rsvp-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Reservar
+          </a>
+        </div>
+        <!-- Card 3 -->
+        <div class="rsvp-card">
+          <div class="rsvp-card-date">03</div>
+          <div class="rsvp-card-info">
+            <span class="rsvp-card-label">3° Sección · Noche de Gloria</span>
+            <span class="rsvp-card-sub">3 de Julio · 7:00 PM</span>
+          </div>
+          <a href="https://forms.google.com" target="_blank" class="rsvp-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Reservar
+          </a>
+        </div>
+      </div>
+
+      <p class="rsvp-note reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        Los links de reserva abren el formulario oficial de Google Forms. Sustituye las URLs con tu enlace real antes de publicar.
+      </p>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
-      <div class="footer-logo-wrap">
-        <img src="assets/logo.png" alt="Colegio Real" class="footer-logo" onerror="this.style.display='none'" />
-      </div>
+      <img src="assets/logo.png" alt="Colegio Real" class="footer-logo" onerror="this.style.display='none'" />
       <div class="footer-sep"></div>
       <p class="footer-name">Colegio Real de Santiago</p>
       <p class="footer-sub">Plantel San Juan · Generación 2025</p>
       <p class="footer-quote">"El saber es la corona más noble que un ser humano puede portar."</p>
-      <div class="footer-crowns">
-        <span>👑</span><span>👑</span><span>👑</span>
-      </div>
+      <div class="footer-crowns">👑 👑 👑</div>
     </div>
   </footer>
 
